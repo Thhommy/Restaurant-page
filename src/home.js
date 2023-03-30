@@ -1,7 +1,7 @@
 import Icon from './images/pizza.svg'
 
-function header(){
-    const container = document.getElementById('content');
+function homepage(){
+    const content = document.getElementById('content');
     
     const headerElement = document.createElement('header');
     
@@ -14,24 +14,24 @@ function header(){
    
 
     const li1 = document.createElement('li');
+    li1.setAttribute('id', 'home');
     li1.textContent = 'Home';
     ul.appendChild(li1);
 
     const li2 = document.createElement('li');
+    li2.setAttribute('id', 'menu');
     li2.textContent = 'Menu';
     ul.appendChild(li2);
 
     const li3 = document.createElement('li');
+    li3.setAttribute('id', 'contact');
     li3.textContent = 'Contact';
     ul.appendChild(li3);
 
     nav.appendChild(ul);
     headerElement.appendChild(nav);
-    container.appendChild(headerElement);
-};
+    content.appendChild(headerElement);
 
-function main(){
-    const content = document.getElementById('content');
    
     const div = document.createElement('div');
     div.classList.add('main');
@@ -58,7 +58,4 @@ function main(){
             <img src="./images/pizza-svgrepo-com.svg">
         </div> */
 
-export {
-    header,
-    main
-};
+export default homepage;
